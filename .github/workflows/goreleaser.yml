@@ -20,10 +20,11 @@ jobs:
         run: sudo docker run --privileged linuxkit/binfmt:v0.8
       -
         name: Docker Login
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-        run: |
-          echo "${GITHUB_TOKEN}" | docker login ghcr.io --username $GITHUB_ACTOR --password-stdin
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GH_PAT }}
       -
         name: Set up Go
         uses: actions/setup-go@v2
