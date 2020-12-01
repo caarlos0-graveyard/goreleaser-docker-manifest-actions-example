@@ -12,12 +12,18 @@ dockers:
 - image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-amd64"]
   binaries: [example]
   dockerfile: Dockerfile
-  build_flag_templates: ["--build-arg", "ARCH=amd64"]
+  build_flag_templates:
+  - "--build-arg"
+  - "ARCH=amd64"
+  - --label=org.label-schema.vcs-url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
 - image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-arm64v8"]
   binaries: [example]
   goarch: arm64
   dockerfile: Dockerfile
-  build_flag_templates: ["--build-arg", "ARCH=arm64v8"]
+  build_flag_templates:
+  - "--build-arg"
+  - "ARCH=arm64v8"
+  - --label=org.label-schema.vcs-url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
 docker_manifests:
 - name_template: ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}
   image_templates:
