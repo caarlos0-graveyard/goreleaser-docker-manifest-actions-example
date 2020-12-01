@@ -15,7 +15,7 @@ dockers:
   build_flag_templates:
   - "--build-arg"
   - "ARCH=amd64"
-  - --label=org.opencontainers.image.title={{ .ProjetName }}
+  - --label=org.opencontainers.image.title={{ .ProjectName }}
   - --label=org.opencontainers.image.description={{ .ProjectName }}
   - --label=org.opencontainers.image.url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
   - --label=org.opencontainers.image.source=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
@@ -30,7 +30,7 @@ dockers:
   build_flag_templates:
   - "--build-arg"
   - "ARCH=arm64v8"
-  - --label=org.opencontainers.image.title={{ .ProjetName }}
+  - --label=org.opencontainers.image.title={{ .ProjectName }}
   - --label=org.opencontainers.image.description={{ .ProjectName }}
   - --label=org.opencontainers.image.url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
   - --label=org.opencontainers.image.source=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
