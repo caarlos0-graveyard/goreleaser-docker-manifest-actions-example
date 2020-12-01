@@ -15,7 +15,14 @@ dockers:
   build_flag_templates:
   - "--build-arg"
   - "ARCH=amd64"
+  - --label=org.opencontainers.image.title={{ .ProjetName }}
+  - --label=org.opencontainers.image.description={{ .ProjectName }}
+  - --label=org.opencontainers.image.url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
   - --label=org.opencontainers.image.source=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
+  - --label=org.opencontainers.image.version={{ .Version }}
+  - --label=org.opencontainers.image.created={{ time "2006-01-02T15:04:05Z07:00" }}
+  - --label=org.opencontainers.image.revision={{ .FullCommit }}
+  - --label=org.opencontainers.image.licenses=MIT
 - image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-arm64v8"]
   binaries: [example]
   goarch: arm64
@@ -23,7 +30,14 @@ dockers:
   build_flag_templates:
   - "--build-arg"
   - "ARCH=arm64v8"
+  - --label=org.opencontainers.image.title={{ .ProjetName }}
+  - --label=org.opencontainers.image.description={{ .ProjectName }}
+  - --label=org.opencontainers.image.url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
   - --label=org.opencontainers.image.source=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
+  - --label=org.opencontainers.image.version={{ .Version }}
+  - --label=org.opencontainers.image.created={{ time "2006-01-02T15:04:05Z07:00" }}
+  - --label=org.opencontainers.image.revision={{ .FullCommit }}
+  - --label=org.opencontainers.image.licenses=MIT
 docker_manifests:
 - name_template: ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}
   image_templates:
