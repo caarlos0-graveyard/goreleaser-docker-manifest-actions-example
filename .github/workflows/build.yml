@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       -
         name: Allow arm Docker builds # https://github.com/linuxkit/linuxkit/tree/master/pkg/binfmt
-        run: sudo docker run --privileged linuxkit/binfmt
+        run: sudo docker run --privileged linuxkit/binfmt:v0.8
       -
         name: Set up Go
         uses: actions/setup-go@v2
