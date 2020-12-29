@@ -8,5 +8,5 @@ import (
 var version = "dev"
 
 func main() {
-	fmt.Println("example", version, runtime.GOOS)
+	fmt.Println("example", version, runtime.GOOS, runtime.GOARCH)
 }
