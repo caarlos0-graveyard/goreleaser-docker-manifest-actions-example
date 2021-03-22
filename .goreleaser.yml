@@ -39,7 +39,6 @@ docker_manifests:
   image_templates:
   - ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-amd64
   - ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-arm64v8
-docker_manifests:
 - name_template: ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:latest
   image_templates:
   - ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-amd64
