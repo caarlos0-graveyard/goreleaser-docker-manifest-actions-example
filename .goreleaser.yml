@@ -10,7 +10,6 @@ builds:
       - arm64
 dockers:
 - image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-amd64"]
-  binaries: [example]
   dockerfile: Dockerfile
   build_flag_templates:
   - --platform=linux/amd64
@@ -23,7 +22,6 @@ dockers:
   - --label=org.opencontainers.image.revision={{ .FullCommit }}
   - --label=org.opencontainers.image.licenses=MIT
 - image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-arm64v8"]
-  binaries: [example]
   goarch: arm64
   dockerfile: Dockerfile
   build_flag_templates:
