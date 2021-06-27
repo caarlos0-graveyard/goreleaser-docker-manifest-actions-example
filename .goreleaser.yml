@@ -11,7 +11,6 @@ builds:
 dockers:
 - image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-amd64"]
   dockerfile: Dockerfile
-  skip_push: true
   build_flag_templates:
   - --platform=linux/amd64
   - --label=org.opencontainers.image.title={{ .ProjectName }}
@@ -25,7 +24,6 @@ dockers:
 - image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-arm64v8"]
   goarch: arm64
   dockerfile: Dockerfile
-  skip_push: true
   build_flag_templates:
   - --platform=linux/arm64/v8
   - --label=org.opencontainers.image.title={{ .ProjectName }}
