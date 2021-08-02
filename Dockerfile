@@ -1,3 +1,3 @@
 FROM alpine
-COPY example /usr/bin/example
-ENTRYPOINT ["/usr/bin/example"]
+COPY goreleaser-docker-manifest-actions-example /usr/bin/goreleaser-docker-manifest-actions-example
+ENTRYPOINT ["/usr/bin/goreleaser-docker-manifest-actions-example"]
