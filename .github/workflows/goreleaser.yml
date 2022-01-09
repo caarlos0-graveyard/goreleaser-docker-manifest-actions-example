@@ -28,6 +28,6 @@ jobs:
         uses: goreleaser/goreleaser-action@v2
         with:
           version: latest
-          args: release --rm-dist
+          args: release --release-notes RELEASE_NOTES.md --rm-dist
         env:
           GITHUB_TOKEN: ${{ github.token }}
