@@ -7,7 +7,6 @@ permissions:
 
 jobs:
   tag:
-    if: ${{ github.event.issue.pull_request }} && contains(github.event.comment.body, '/release')
     runs-on: ubuntu-latest
     continue-on-error: false
     name: tag commit
