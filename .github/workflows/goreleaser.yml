@@ -1,5 +1,8 @@
 name: goreleaser
-on: issue_comment
+on:
+  issue_comment:
+    types:
+      - created
 jobs:
 #  tag:
 #    runs-on: ubuntu-latest
