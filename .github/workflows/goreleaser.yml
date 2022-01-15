@@ -1,10 +1,10 @@
 name: goreleaser
-on:
-  issue_comment:
-    types:
-      - created
+on: push
+
 jobs:
-#  tag:
+#  tag:issue_comment:
+  #    types:
+  #      - created
 #    runs-on: ubuntu-latest
 #    continue-on-error: false
 #    name: tag commit
